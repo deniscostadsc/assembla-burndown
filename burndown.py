@@ -60,7 +60,7 @@ for ticket in tickets:
         '"%s"' % ticket.custom_fields['Equipe'],
         '"%s"' % assigned_to,
         '"%s"' % ticket.custom_fields['Ticket extra?'],
-        '"%s"' % ticket.custom_fields['Estimativa total'],
+        '"%s"' % ticket.custom_fields.get('Estimativa total', '-'),
         '"%s"' % ticket.custom_fields['Finaliza no sprint?'],
         '"%s"\n' % ticket.status
     ])
